@@ -18,8 +18,6 @@ public class Service extends Theater {
 			Iterator<Movie> it=list.iterator();
 			while(it.hasNext()) {
 				Movie m=it.next();
-		
-           String returnMovie = null;
 			if (moviename.equalsIgnoreCase(m.getMovieName())) {
 				System.out.println("Movie name:"+m.getMovieName());
 				System.out.println("Movie Id:"+m.getMovieId());
@@ -29,8 +27,6 @@ public class Service extends Theater {
 				System.out.println("Movie release date:"+m.getMovieReleaseDate());
 				break;
 			}
-		
-		
 	}}}
 	catch(Exception e) {
 		System.out.println("Wrong details...");
@@ -48,8 +44,6 @@ public class Service extends Theater {
 					Iterator<Screen> it1=list2.iterator();
 					while(it1.hasNext()) {
 						Screen s=it1.next();
-				
-			 String returnScreen = null;
 				if(screenId == s.getScreenId()){
 					//returnScreen = screen;
 					System.out.println("Available Screen :"+s.getScreenId());

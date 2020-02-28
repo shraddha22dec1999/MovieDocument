@@ -29,7 +29,6 @@ public class Service1 extends Movie {
 			while(st.hasMoreTokens()) {
 				al.add(st.nextToken());
 			}
-	//		System.out.println("set movie genre");
 			m.setMovieGenre(al);
 			
 			System.out.println("Enter the name of movie director");
