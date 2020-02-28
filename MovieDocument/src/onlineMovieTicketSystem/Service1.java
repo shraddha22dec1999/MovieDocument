@@ -23,39 +23,39 @@ public class Service1 extends Movie {
 			System.out.println("Enter the movie id");
 			m.setMovieId(Integer.parseInt(br.readLine()));
 			
-			//System.out.println("Enter the show genre");
-			//String str=br.readLine();
-		//	StringTokenizer st=new StringTokenizer(str,",");
-			//while(st.hasMoreTokens()) {
-				//al.add(st.nextToken());
-			//}
-			//System.out.println("set movie genre");
-		//	m.setMovieGenre(al);
+			System.out.println("Enter the show genre");
+			String str=br.readLine();
+		    StringTokenizer st=new StringTokenizer(str,",");
+			while(st.hasMoreTokens()) {
+				al.add(st.nextToken());
+			}
+	//		System.out.println("set movie genre");
+			m.setMovieGenre(al);
 			
 			System.out.println("Enter the name of movie director");
 			m.setMovieDirector(br.readLine());
 			
-		//	System.out.println("Enter screen time of movie in format hh:mm:ss");
-		//	str=br.readLine();
-			//st=new StringTokenizer(str,":");
-			//while(st.hasMoreTokens()) {
-				//al2.add(Integer.parseInt(st.nextToken()));
-		//	}
-			//m.setMovieLength(LocalTime.of((int)al2.get(0),(int)al2.get(1),(int)al2.get(2)));
-		//	System.out.println("Enter the language of the movie");
-			//str=br.readLine();
-		//	st=new StringTokenizer(str,",");
-	//		while(st.hasMoreElements())
-		//	{
-		//		al3.add(st.nextToken());}
-			//m.setLanguages(al3);
-		//	System.out.println("Enter date of the movie release in format dd/mm/yyyy");
-		//	str=br.readLine();
-		//	st=new StringTokenizer(str,"/");
-		//	while(st.hasMoreElements()) {
-		//		al4.add(Integer.parseInt(st.nextToken()));
-		//	}
-	//		m.setMovieReleaseDate(LocalDate.of(al4.get(2), al4.get(1), al4.get(0)));
+			System.out.println("Enter screen time of movie in format hh:mm:ss");
+			str=br.readLine();
+			st=new StringTokenizer(str,":");
+			while(st.hasMoreTokens()) {
+				al2.add(Integer.parseInt(st.nextToken()));
+		     }
+			m.setMovieLength(LocalTime.of((int)al2.get(0),(int)al2.get(1),(int)al2.get(2)));
+			System.out.println("Enter the language of the movie");
+			str=br.readLine();
+			st=new StringTokenizer(str,",");
+			while(st.hasMoreElements())
+			{
+			al3.add(st.nextToken());}
+			m.setLanguages(al3);
+			System.out.println("Enter date of the movie release in format dd/mm/yyyy");
+			str=br.readLine();
+			st=new StringTokenizer(str,"/");
+			while(st.hasMoreElements()) {
+			al4.add(Integer.parseInt(st.nextToken()));
+			}
+			m.setMovieReleaseDate(LocalDate.of(al4.get(2), al4.get(1), al4.get(0)));
 			System.out.println("Done!!");
 			return m;
 			}

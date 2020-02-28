@@ -8,7 +8,7 @@ import onlineMovieTicketSystem.Screen;
 
 public class Service extends Theater {
 	static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-	public Movie searchMovie(ArrayList list){
+	public void searchMovie(ArrayList list){
 		try {
 		System.out.println("Enter movie name");
 		String moviename=br.readLine();
@@ -19,23 +19,26 @@ public class Service extends Theater {
 			while(it.hasNext()) {
 				Movie m=it.next();
 		
-           Movie returnMovie = null;
-		for(Movie movie2 : getMovies()){
-			if (moviename.equalsIgnoreCase(movie2.getMovieName())) {
-				returnMovie = movie2;
+           String returnMovie = null;
+			if (moviename.equalsIgnoreCase(m.getMovieName())) {
+				System.out.println("Movie name:"+m.getMovieName());
+				System.out.println("Movie Id:"+m.getMovieId());
+				System.out.println("Movie genre:"+m.getMovieGenre());
+				System.out.println("Movie Director:"+m.getMovieDirector());
+				System.out.println("Movie Language:"+m.getLanguages());
+				System.out.println("Movie release date:"+m.getMovieReleaseDate());
 				break;
 			}
-		}
 		
-		return returnMovie;
+		
 	}}}
 	catch(Exception e) {
-		System.out.println("Wrong details");
-	}
-		return null;
+		System.out.println("Wrong details...");
 	}
 		
-		public Screen searchScreen(ArrayList list2) {
+	}
+		
+		public void searchScreen(ArrayList list2) {
 				try {
 				System.out.println("Enter screen");
 				int screenId=Integer.valueOf(br.readLine());
@@ -46,18 +49,15 @@ public class Service extends Theater {
 					while(it1.hasNext()) {
 						Screen s=it1.next();
 				
-			 Screen returnScreen = null;
-			 for (Screen screen : getListOfScreens()) {
-				if(screenId == screen.getScreenId()){
-					returnScreen = screen;
+			 String returnScreen = null;
+				if(screenId == s.getScreenId()){
+					//returnScreen = screen;
+					System.out.println("Available Screen :"+s.getScreenId());
 					break;
 				}
-			}
-			 return returnScreen;
 					}}}
 			catch(Exception e) {
 				System.out.println("Wrong details!!");
 			}
-				return null;
 }
 }
